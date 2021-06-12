@@ -11,7 +11,8 @@ import {
   Th,
   Checkbox,
   Td,
-  Text
+  Text,
+  useBreakpointValue
 } from '@chakra-ui/react';
 
 import { RiAddLine, RiPencilLine } from 'react-icons/ri';
@@ -21,10 +22,12 @@ import { Pagination } from '../../components/Pagination';
 import { Sidebar } from '../../components/Sidebar';
 
 export default function UserList() {
+  const isWideVersion = useBreakpointValue({ base: false, lg: true })
+
   return (
     <Box>
       <Header />
-      <Flex w="100%" my="6" maxW={1480} mx="auto" px="6">
+      <Flex w="100%" my="6" maxW={1480} mx="auto" px={["4", "6"]}>
         <Sidebar />
 
         <Box flex="1" borderRadius={8} bg="gray.800" p="8">
@@ -45,39 +48,27 @@ export default function UserList() {
           <Table colorScheme="whiteAlpha">
             <Thead>
               <Tr>
-                <Th px="6" color="gray.300" width="8">
+                <Th px={["0", "4", "6"]} color="gray.300" width="8">
                   <Checkbox colorScheme="pink" />
                 </Th>
                 <Th>Usuário</Th>
-                <Th>Data de cadastro</Th>
-                <Th w="8"></Th>
+                {isWideVersion && <Th>Data de cadastro</Th>}
               </Tr>
             </Thead>
             <Tbody>
               <Tr>
-                <Td>
+                <Td px={["0", "4", "6"]}>
                   <Checkbox colorScheme="pink" />
                 </Td>
                 <Td>
                   <Box>
                     <Text fontWeight="bold">Jhonata Gutemberg</Text>
                     <Text fontSize="sm" color="gray.300">
-                      gutemberg.honata@gmail.com
+                      gutemberg.jhonata@gmail.com
                     </Text>
                   </Box>
                 </Td>
-                <Td>12 de Junho, 2021</Td>
-                <Td>
-                  <Button
-                    as="a"
-                    size="sm"
-                    fontSize="sm"
-                    colorScheme="purple"
-                    leftIcon={<Icon as={RiPencilLine} fontSize="16" />}
-                  >
-                    Editar
-                  </Button>
-                </Td>
+                {isWideVersion && <Td>12 de Junho, 2021</Td>}
               </Tr>
             </Tbody>
           </Table>
