@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="dashgo" src=".github/dashgo.svg" width="100%">
+  <img alt="dashgo" src=".github/dashgo.png" width="100%">
 </p>
 
 ## 🧪 Tecnologias
@@ -29,7 +29,7 @@ yarn dev
 
 ## 💻 Projeto
 
-Desenvolvida durante o bootcamp Ignite, na trilha de ReactJS. O dashgo é uma aplicação de painel administrativo construída com Chakra UI.
+O dashgo é uma aplicação responsiva de painel administrativo. Desenvolvida durante o bootcamp Ignite, na trilha de ReactJS.
 
 ## :memo: Licença
 
