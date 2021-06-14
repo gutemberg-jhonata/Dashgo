@@ -11,6 +11,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - NextJS
 - Chakra UI
 - ApexCharts
+- React Hook Form
+- Yup
 
 ## 🚀 Uso
 
