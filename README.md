@@ -14,6 +14,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - React Hook Form
 - Yup
 - MirageJS
+- Faker
 
 ## 🚀 Uso
 
