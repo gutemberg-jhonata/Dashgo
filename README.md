@@ -15,6 +15,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - Yup
 - MirageJS
 - Faker
+- React Query
 
 ## 🚀 Uso
 
