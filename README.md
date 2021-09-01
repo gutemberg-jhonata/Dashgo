@@ -13,6 +13,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - ApexCharts
 - React Hook Form
 - Yup
+- MirageJS
 
 ## 🚀 Uso
 
