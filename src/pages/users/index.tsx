@@ -1,4 +1,5 @@
 import NextLink from 'next/link';
+import { GetServerSideProps } from 'next';
 
 import {
   Box,
@@ -26,13 +27,26 @@ import { Header } from '../../components/Header';
 import { Pagination } from '../../components/Pagination';
 import { Sidebar } from '../../components/Sidebar';
 
-import { useUsers } from '../../services/hooks/useUsers';
+import { getUsers, useUsers } from '../../services/hooks/useUsers';
 import { queryClient } from '../../services/queryClient';
 import { api } from '../../services/api';
 
-export default function UserList() {
+type User = {
+  id: number;
+  name: string;
+  email: string;
+  createdAt: string;
+};
+
+type UserListProps = {
+  users: User[];
+};
+
+export default function UserList({ users }: UserListProps) {
   const [page, setPage] = useState(1);
-  const { data, isLoading, isFetching, error } = useUsers(page);
+  const { data, isLoading, isFetching, error } = useUsers(page, {
+    initialData: users
+  });
 
   const isWideVersion = useBreakpointValue({ base: false, lg: true });
 
@@ -129,3 +143,13 @@ export default function UserList() {
     </Box>
   )
 }
+
+/*export const getServerSideProps: GetServerSideProps = async () => {
+  const { users } = await getUsers(1)
+
+  return {
+    props: {
+      users
+    }
+  }
+}*/
