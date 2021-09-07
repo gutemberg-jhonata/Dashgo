@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="dashgo" src=".github/dashgo.png" width="100%">
+  <img alt="dashgo" src=".github/dashgo.gif" width="100%">
 </p>
 
 ## 🧪 Tecnologias
@@ -10,7 +10,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - ReactJS
 - NextJS
 - Chakra UI
-- ApexCharts
+- Apex Charts
 - React Hook Form
 - Yup
 - MirageJS
